@@ -1,7 +1,5 @@
 package com.github.premrajm.config
 
-import com.github.premrajm.service.UserRegistryActor.ActionPerformed
-import com.github.premrajm.service.Users
 import com.github.premrajm.service.{ User, Users }
 
 //#json-support
@@ -15,6 +13,6 @@ trait JsonSupport extends SprayJsonSupport {
   implicit val userJsonFormat = jsonFormat3(User)
   implicit val usersJsonFormat = jsonFormat1(Users)
 
-  implicit val actionPerformedJsonFormat = jsonFormat1(ActionPerformed)
 }
+
 //#json-support
